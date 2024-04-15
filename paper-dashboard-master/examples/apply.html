@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>식당 등록</title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!-- Fonts and icons -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <!-- CSS Files -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <style>
+    /* Additional Styles */
+    body, html {
+      height: 100%;
+    }
+
+    .main-container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-box {
+      background-color: #f4f4f4;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      width: 600px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .submit-button {
+      background-color: #ff9d9d;
+      color: #000000;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none; /* Remove underline */
+    }
+
+    .submit-button:hover {
+      background-color: #0056b3;
+    }
+
+    .page-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-container">
+    <img src="../examples/my waiting2.png" alt="mywaiting">
+    <div class="form-box">
+      <h2>식당 등록</h2>
+      <form action="../examples/success.html">
+        <div class="form-group">
+          <label for="restaurant-name">식당 이름:</label>
+          <input type="text" class="form-control" id="restaurant-name" name="restaurant-name" required>
+        </div>
+        <div class="form-group">
+          <label for="restaurant-phone">식당 전화번호:</label>
+          <input type="tel" class="form-control" id="restaurant-phone" name="restaurant-phone" required>
+        </div>
+        <div class="form-group">
+          <label for="restaurant-address">식당 주소:</label>
+          <input type="text" class="form-control" id="restaurant-address" name="restaurant-address" required>
+        </div>
+        <div class="form-group">
+          <label for="restaurant-hours">식당 영업시간:</label>
+          <input type="text" class="form-control" id="restaurant-hours" name="restaurant-hours" required>
+        </div>
+        <div class="form-group">
+          <label for="restaurant-description">식당 소개글:</label>
+          <textarea class="form-control" id="restaurant-description" name="restaurant-description" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">식당 등록</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

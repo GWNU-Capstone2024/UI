@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Success 페이지</title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!-- Fonts and icons -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <!-- CSS Files -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <!-- QR Code Generator Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <!-- jsPDF Library for PDF generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <style>
+    /* Additional Styles */
+    body, html {
+      height: 100%;
+    }
+
+    .main-container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .success-box {
+      background-color: #f4f4f4;
+      padding: 40px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 800px;
+    }
+
+    .success-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .qrcode {
+      margin: 0 auto; /* 가운데 정렬 */
+      text-align: center; /* 가운데 정렬 */;
+    }
+
+    .button-group {
+      margin-top: 20px;
+    }
+
+    .button {
+      background-color: #ff9d9d;
+      color: #000000;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-container">
+    <img src="../examples/my waiting2.png" alt="mywaiting">
+    <div class="success-box">
+      <h2>등록이 성공적으로 완료되었습니다!</h2>
+      <p>고객들이 웨이팅을 하기 위해 이 QR 코드를 스캔하세요.</p>
+      <div class="qrcode" id="qrcode"></div>
+
+      <!-- 버튼 그룹 -->
+      <div class="button-group">
+        <button class="button" onclick="saveQRCodeAsPDF()">QR코드 PDF 파일로 저장하기</button>
+        <a href="waiting-management.html" class="button">웨이팅 관리하기</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script to Generate QR Code -->
+  <script>
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+      text: "https://www.example.com/waiting",
+      width: 200,
+      height: 200,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+
+    // QR코드를 PDF 파일로 저장하는 함수
+    function saveQRCodeAsPDF() {
+      var pdf = new jsPDF();
+      var canvas = document.querySelector('canvas');
+      pdf.addImage(canvas.toDataURL('image/jpeg'), 'JPEG', 10, 10, 180, 180);
+      pdf.save('qrcode.pdf');
+    }
+  </script>
+</body>
+
+</html>
+
