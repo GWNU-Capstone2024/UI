@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웨이팅 등록 완료</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* 추가된 CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .waiting-info {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>웨이팅 등록 완료</h1>
+    <div class="waiting-info">
+      <p>웨이팅 등록이 완료되었습니다.</p>
+      <p>대기 번호: <span id="waitingNumber">12</span>번</p> <!-- 대기 번호 표시 -->
+      <p>남은 대기 시간: <span id="remainingTime">30</span>분</p> <!-- 남은 대기 시간 표시 -->
+    </div>
+    <div class="button-container">
+      <a href="main.html" class="btn">메인 화면으로 돌아가기</a> <!-- 메인 화면으로 돌아가는 링크 -->
+      <a href="menu.html" class="btn">메뉴 보기</a> <!-- 메뉴 보기 페이지로 이동하는 링크 -->
+    </div>
+  </div>
+</body>
+
+</html>

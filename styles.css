@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 90%;
+    margin: 50px auto;
+    text-align: center;
+  }
+  
+  .waiting-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .waiting-list .team {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  
+  .waiting-time {
+    margin-top: 30px;
+  }
+  
+  .button-container {
+    margin-top: 30px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none; /* 밑줄 제거 */
+  }  
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .container {
+      max-width: 400px;
+    }
+  }
+  

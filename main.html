@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마이 웨이팅 : 웨이팅 등록</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif; /* 기본 글꼴 설정 */
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4; /* 배경색 설정 */
+    }
+
+    .container {
+      max-width: 400px; /* 컨테이너 최대 너비 설정 */
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+      text-align: center; /* 텍스트 가운데 정렬 */
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .waiting-info {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>마이 웨이팅 : 웨이팅 등록</h1>
+    <h2> OO 식당</h2>
+    <div class="waiting-info">
+      <p>총 대기 팀: <span id="total-teams">8</span> 팀</p>
+      <p>총 대기 인원 수: <span id="total-customers">32</span> 명</p>
+      <p>총 대기 시간: <span id="total-customers">60</span> 분</p>
+    </div>
+    <div class="button-container">
+      <a href="waiting.html" class="btn">웨이팅 등록</a>
+      <button class="btn">메뉴 보기</button>
+    </div>
+  </div>
+</body>
+
+</html>
